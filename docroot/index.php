@@ -1,6 +1,9 @@
 <?php
-
+require_once '../vendor/autoload.php';
 $config = include '../config/configs.php';
 require('../api.php');
-echo "\n".$config;
-$API_TOKEN = generateToken($config[$clientCreds]);
+
+
+$API_TOKEN = generateToken($config['clientCreds']);
+// print_r($API_TOKEN);
+// print_r(getAllRealmID($API_TOKEN));
